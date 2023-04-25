@@ -30,7 +30,7 @@ export function less(opts: d.PluginOptions = {}): d.Plugin {
         render(renderOpts.data, {
           plugins: renderOpts.plugins,
           filename: fileName
-        }, (err: any, lessResult: any) => {
+        }, (err, lessResult) => {
           if (err) {
             loadDiagnostic(context, err, fileName);
             results.code = `/**  less error${err && err.message ? ': ' + err.message : ''}  **/`;
