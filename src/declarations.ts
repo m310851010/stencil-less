@@ -1,6 +1,6 @@
-export * from '@stencil/core/internal';
+export * from "@stencil/core/internal";
 
-export interface PluginOptions {
-  plugins?: Less.Plugin[];
+export type PluginOptions = Omit<Less.Options, "filename"> & {
   injectGlobalPaths?: string[];
-}
+  injectGlobalSource?: string[];
+};
